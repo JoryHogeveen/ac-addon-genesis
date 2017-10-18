@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:  Admin Columns - Genesis add-on
+ * Plugin Name:  Admin Columns - Genesis Framework add-on
  * Plugin URI:   https://github.com/JoryHogeveen/admincolumns-addon-genesis
  * Version:      1.0
- * Description:  Show Genesis fields in your admin post overviews and edit them inline! Genesis integration Add-on for Admin Columns.
+ * Description:  Show Genesis Framework fields in your admin post overviews and edit them inline! Genesis Framework integration Add-on for Admin Columns.
  * Author:       Jory Hogeveen
  * Author URI:   http://www.keraweb.nl
  * Text Domain:  codepress-admin-columns

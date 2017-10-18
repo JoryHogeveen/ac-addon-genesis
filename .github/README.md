@@ -1,12 +1,12 @@
-# Admin Columns - Genesis add-on
+# Admin Columns - Genesis Framework add-on
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/JoryHogeveen/admincolumns-addon-members/blob/master/license.txt)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLMLU7XQ9E8&lc=NL&item_name=Admin%20Columns%20-%20Genesis%20add-on&item_number=JWPP%2dACA-Genesis&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
-Genesis integration Add-on for Admin Columns.
+Genesis Framework integration Add-on for Admin Columns.
 
 ## Description
 
-Show Genesis fields in your admin post overviews and (if you have Admin Columns Pro) edit them inline!
+Show Genesis Framework fields in your admin post overviews and (if you have Admin Columns Pro) edit them inline!
 
 ### Requirements
 

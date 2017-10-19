@@ -13,7 +13,7 @@ abstract class ACA_Genesis_Column_Layout extends ACA_Genesis_Column
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'genesis-layout' );
-		$this->set_label( __( 'Layout', 'codepress-admin-columns' ) );
+		$this->set_label( __( 'Select Layout', 'genesis' ) );
 	}
 
 	/**

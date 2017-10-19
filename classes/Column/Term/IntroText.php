@@ -13,7 +13,7 @@ class ACA_Genesis_Column_Term_IntroText extends ACA_Genesis_Column
 	public function __construct() {
 		parent::__construct();
 		$this->set_type( 'genesis-intro-text' );
-		$this->set_label( __( 'Archive Intro Text', 'codepress-admin-columns' ) );
+		$this->set_label( __( 'Archive Intro Text', 'genesis' ) );
 		$this->set_meta_key( 'intro_text' );
 	}
 

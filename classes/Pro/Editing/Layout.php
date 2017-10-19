@@ -19,6 +19,7 @@ class ACA_Genesis_Pro_Editing_Layout extends ACA_Genesis_Pro_Editing
 		 * >> wp-content/themes/genesis/lib/views/meta-boxes/genesis-user-layout.php
 		 */
 
+		// @todo Pass object ID.
 		$layouts = $this->column->get_genesis_layouts();
 
 		foreach ( $layouts as $key => $data ) {
@@ -29,15 +30,18 @@ class ACA_Genesis_Pro_Editing_Layout extends ACA_Genesis_Pro_Editing
 
 		$layouts = array_merge(
 			array(
-				// translators: Theme settings admin screen link
-				'' => sprintf( esc_html__( 'Default Layout set in %s', 'genesis' ), '<a href="' . esc_url( menu_page_url( 'genesis', 0 ) ) . '">' . esc_html__( 'Theme Settings', 'genesis' ) . '</a>' ),
+				'' => sprintf(
+					// translators: Theme settings admin screen link
+					esc_html__( 'Default Layout set in %s', 'genesis' ),
+					'<a href="' . esc_url( menu_page_url( 'genesis', 0 ) ) . '">' . esc_html__( 'Theme Settings', 'genesis' ) . '</a>'
+				),
 			),
 			$layouts
 		);
 
 		return array(
 			'type'        => 'genesis_layout',
-			'placeholder' => __( 'Select Layout', 'codepress-admin-columns' ),
+			'placeholder' => __( 'Select Layout', 'genesis' ),
 			'options'     => $layouts,
 		);
 	}

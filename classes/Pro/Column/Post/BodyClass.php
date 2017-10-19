@@ -18,7 +18,7 @@ class ACA_Genesis_Pro_Column_Post_BodyClass extends ACA_Genesis_Column_Post_Body
 	}
 
 	public function filtering() {
-		return new ACA_Genesis_Pro_Filtering( $this );
+		return new ACA_Genesis_Pro_Filtering_Classes( $this );
 	}
 
 }

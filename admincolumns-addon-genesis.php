@@ -165,7 +165,7 @@ class ACA_Genesis {
 
 		$url = $this->get_plugin_url();
 
-		wp_enqueue_script(
+		wp_register_script(
 			'aca-genesis-xeditable-input-genesis_layout',
 			$url . 'assets/js/xeditable/input/genesis-layout' . $suffix . '.js',
 			array(
@@ -189,8 +189,8 @@ class ACA_Genesis {
 
 		$url = $this->get_plugin_url();
 
-		wp_enqueue_style( 'aca-wc-column', $url . 'assets/css/column' . $suffix . '.css', array(), $this->get_version() );
-		//wp_enqueue_script( 'aca-wc-table', $url . 'assets/js/table.js', array( 'jquery' ), $this->get_version() );
+		wp_register_style( 'aca-genesis-column', $url . 'assets/css/column' . $suffix . '.css', array(), $this->get_version() );
+		//wp_enqueue_script( 'aca-genesis-table', $url . 'assets/js/table.js', array( 'jquery' ), $this->get_version() );
 	}
 
 	/**

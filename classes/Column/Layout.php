@@ -39,6 +39,11 @@ abstract class ACA_Genesis_Column_Layout extends ACA_Genesis_Column
 		return $value;
 	}
 
+	public function scripts() {
+		parent::scripts();
+		wp_enqueue_style( 'aca-genesis-column' );
+	}
+
 	/**
 	 * @param  int  $id  Object ID. Default is for a post type.
 	 * @return array

@@ -21,4 +21,9 @@ class ACA_Genesis_Pro_Column_Post_Layout extends ACA_Genesis_Column_Post_Layout
 		return new ACA_Genesis_Pro_Filtering( $this );
 	}
 
+	public function scripts() {
+		parent::scripts();
+		wp_enqueue_script( 'aca-genesis-xeditable-input-genesis_layout' );
+	}
+
 }

@@ -58,6 +58,10 @@ class ACA_Genesis {
 		// Prio 9 to make sure PRO is loaded after FREE.
 		add_action( 'ac/column_types', array( $this, 'add_columns' ), 9 );
 		add_action( 'acp/column_types', array( $this, 'add_pro_columns' ) );
+
+		// Scripts
+		add_action( 'ac/table_scripts', array( $this, 'table_scripts' ) );
+		add_action( 'ac/table_scripts/editing', array( $this, 'table_scripts_editing' ) );
 	}
 
 	/**
@@ -110,6 +114,18 @@ class ACA_Genesis {
 	}
 
 	/**
+	 * @return string
+	 */
+	public function get_plugin_url() {
+		static $url = null;
+		if ( $url ) {
+			return $url;
+		}
+		$url = plugin_dir_url( __FILE__ );
+		return $url;
+	}
+
+	/**
 	 * @return int|float|string
 	 */
 	public function get_version() {
@@ -138,6 +154,42 @@ class ACA_Genesis {
 	 */
 	public function is_genesis_active() {
 		return 'genesis' === get_template();
+	}
+
+	/**
+	 * @param AC_ListScreen $list_screen
+	 */
+	public function table_scripts_editing( $list_screen ) {
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '.min' : '';
+
+		$url = $this->get_plugin_url();
+
+		wp_enqueue_script(
+			'aca-genesis-xeditable-input-genesis_layout',
+			$url . 'assets/js/xeditable/input/genesis-layout' . $suffix . '.js',
+			array(
+				'jquery',
+				'acp-editing-table',
+			),
+			$this->get_version()
+		);
+
+		// Translations
+		//wp_localize_script( 'aca-genesis-xeditable-input-genesis_layout', 'acp_genesis_i18n', array() );
+	}
+
+	/**
+	 * @since 1.3
+	 *
+	 * @param AC_ListScreen $list_screen
+	 */
+	public function table_scripts( $list_screen ) {
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '.min' : '';
+
+		$url = $this->get_plugin_url();
+
+		wp_enqueue_style( 'aca-wc-column', $url . 'assets/css/column' . $suffix . '.css', array(), $this->get_version() );
+		//wp_enqueue_script( 'aca-wc-table', $url . 'assets/js/table.js', array( 'jquery' ), $this->get_version() );
 	}
 
 	/**

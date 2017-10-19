@@ -6,6 +6,12 @@ table.wp-list-table tbody.cacie-enabled td.cacie-editable-genesis_layout .cacie-
 	vertical-align: top;
 }
 
+table.wp-list-table tbody.cacie-enabled td.cacie-editable-genesis_layout .cacie-editable img {
+	width: 75px;
+	max-width: 100%;
+	height: auto;
+}
+
 /**
  * Genesis Layout
  * ----------------------------------------------------------------------------

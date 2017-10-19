@@ -33,7 +33,7 @@ abstract class ACA_Genesis_Column_Layout extends ACA_Genesis_Column
 		if ( isset( $layouts[ $value ] ) ) {
 			$label = $layouts[ $value ]['label'];
 			$img = $layouts[ $value ]['img'];
-			$value = '<img src="' . $img . '" alt="' . $label . '" style="width: 68px; max-width: 100%; height: auto;" />';
+			$value = '<img src="' . $img . '" alt="' . $label . '" />';
 		}
 
 		return $value;

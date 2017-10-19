@@ -12,7 +12,7 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
 	 */
 	public function get_view_settings() {
 		return array(
-			'type' => 'select2_tags',
+			'type' => 'select2_classes',
 		);
 	}
 

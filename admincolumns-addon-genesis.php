@@ -175,6 +175,16 @@ class ACA_Genesis {
 			$this->get_version()
 		);
 
+		wp_register_script(
+			'aca-genesis-xeditable-input-select2_classes',
+			$url . 'assets/js/xeditable/input/select2-classes' . $suffix . '.js',
+			array(
+				'jquery',
+				'acp-editing-table',
+			),
+			$this->get_version()
+		);
+
 		// Translations
 		//wp_localize_script( 'aca-genesis-xeditable-input-genesis_layout', 'acp_genesis_i18n', array() );
 	}

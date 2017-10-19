@@ -21,4 +21,9 @@ class ACA_Genesis_Pro_Column_Post_BodyClass extends ACA_Genesis_Column_Post_Body
 		return new ACA_Genesis_Pro_Filtering_Classes( $this );
 	}
 
+	public function scripts() {
+		parent::scripts();
+		wp_enqueue_script( 'aca-genesis-xeditable-input-select2_classes' );
+	}
+
 }

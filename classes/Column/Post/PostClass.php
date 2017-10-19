@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column_Post_PostClass extends ACA_Genesis_Column
+class ACA_Genesis_Column_Post_PostClass extends ACA_Genesis_Column_Classes
 {
 	/**
 	 * @inheritdoc

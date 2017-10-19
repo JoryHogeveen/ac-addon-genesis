@@ -10,7 +10,7 @@ class ACA_Genesis_Pro_Column_Post_BodyClass extends ACA_Genesis_Column_Post_Body
 	// Pro
 
 	public function editing() {
-		return new ACA_Genesis_Pro_Editing( $this );
+		return new ACA_Genesis_Pro_Editing_Classes( $this );
 	}
 
 	public function sorting() {

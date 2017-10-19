@@ -16,6 +16,10 @@ Show Genesis Framework fields in your admin post overviews and (if you have Admi
   * *Or **Admin Columns Pro:** https://www.admincolumns.com/*
 * **Theme based on the Genesis framework:** https://my.studiopress.com/themes/genesis/
 
+### Compatibility
+
+* **Genesis Layouts Extras** https://wordpress.org/plugins/genesis-layout-extras/
+
 ## Installation
 
 Installation of this plugin works like any other plugin out there. Either:

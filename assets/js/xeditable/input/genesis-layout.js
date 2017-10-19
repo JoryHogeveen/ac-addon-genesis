@@ -77,8 +77,6 @@
 		}
 	} );
 
-	console.log( $.fn.editabletypes );
-
 	var template = '<div>';
 
 	Genesis_Layout.defaults = $.extend( {}, $.fn.editabletypes.select.defaults, {

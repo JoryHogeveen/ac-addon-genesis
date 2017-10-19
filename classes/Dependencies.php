@@ -55,7 +55,7 @@ class ACA_Genesis_Dependencies {
 
 	public function is_acp_active( $version ) {
 		if ( ! function_exists( 'acp_is_version_gte' ) || ! acp_is_version_gte( $version ) ) {
-			$name = $this->get_html_link( 'https://www.admincolumns.com', 'Admin Column Pro' );
+			$name = $this->get_html_link( 'https://www.admincolumns.com', 'Admin Column Pro', true );
 			$name .= ' (' . sprintf( __( 'version %s or later', 'codepress-admin-columns' ), $version ) . ')';
 
 			$this->add_missing( $name );
@@ -82,11 +82,13 @@ class ACA_Genesis_Dependencies {
 	/**
 	 * @param string $url
 	 * @param string $label
+	 * @param bool   $target_blank
 	 *
 	 * @return string
 	 */
-	public function get_html_link( $url, $label ) {
-		return sprintf( '<a href="%s">%s</a>', esc_url( $url ), esc_html( $label ) );
+	public function get_html_link( $url, $label, $target_blank = false ) {
+		$target = ( $target_blank ) ? ' target="_blank"' : '';
+		return sprintf( '<a href="%s"' . $target . '>%s</a>', esc_url( $url ), esc_html( $label ) );
 	}
 
 	/**

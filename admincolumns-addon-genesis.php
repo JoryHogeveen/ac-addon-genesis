@@ -83,7 +83,7 @@ class ACA_Genesis {
 		//$dependencies->is_acp_active( '4.0.3' );
 
 		if ( ! $this->is_genesis_active() ) {
-			$link = $dependencies->get_html_link( 'https://my.studiopress.com/themes/genesis/', 'Genesis Framework' );
+			$link = $dependencies->get_html_link( 'https://my.studiopress.com/themes/genesis/', 'Genesis Framework', true );
 			$dependencies->add_missing( $link );
 		}
 

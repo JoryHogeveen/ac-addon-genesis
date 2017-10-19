@@ -29,7 +29,8 @@ class ACA_Genesis_Pro_Editing_Layout extends ACA_Genesis_Pro_Editing
 
 		$layouts = array_merge(
 			array(
-				'' => __( 'Default Layout', 'genesis' ),
+				// translators: Theme settings admin screen link
+				'' => sprintf( esc_html__( 'Default Layout set in %s', 'genesis' ), '<a href="' . esc_url( menu_page_url( 'genesis', 0 ) ) . '">' . esc_html__( 'Theme Settings', 'genesis' ) . '</a>' ),
 			),
 			$layouts
 		);

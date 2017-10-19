@@ -2,11 +2,11 @@
  * Tooltip buttons
  * ----------------------------------------------------------------------------
  */
-table.wp-list-table tbody.cacie-enabled td.cacie-editable-genesis_layout .cacie-editable {
+table.wp-list-table tbody td.genesis-layout .inner {
 	vertical-align: top;
 }
 
-table.wp-list-table tbody.cacie-enabled td.cacie-editable-genesis_layout .cacie-editable img {
+table.wp-list-table tbody td.genesis-layout img {
 	width: 75px;
 	max-width: 100%;
 	height: auto;

@@ -14,7 +14,7 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 		$value = $this->get_raw_value( $id );
 
 		if ( ! $value ) {
-			$value = array();
+			return false;
 		}
 
 		return implode( $this->get_separator(), (array) $value );
@@ -28,7 +28,7 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 		$value = $this->get_meta_value( $id, $this->get_meta_key(), true );
 
 		if ( ! $value ) {
-			return array();
+			return false;
 		}
 
 		return $value;
@@ -44,12 +44,14 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 		if ( $single ) {
 
 			$values = explode( $this->get_separator(), $values );
+			$values = array_filter( $values );
 			$values = array_combine( $values, $values );
 
 		} else {
 
 			foreach ( $values as $key => $val ) {
 				$val = explode( $this->get_separator(), $val );
+				$val = array_filter( $val );
 				$values[ $key ] = array_combine( $val, $val );
 			}
 		}

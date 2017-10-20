@@ -40,15 +40,20 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 	 */
 	public function get_meta_value( $id, $meta_key, $single = true ) {
 		$values = parent::get_meta_value( $id, $meta_key, $single );
+
 		if ( $single ) {
+
 			$values = explode( $this->get_separator(), $values );
+			$values = array_combine( $values, $values );
+
 		} elseif ( ! $single ) {
+
 			foreach ( $values as $key => $val ) {
 				$val = explode( $this->get_separator(), $val );
 				$values[ $key ] = array_combine( $val, $val );
 			}
 		}
-		$values = array_combine( $values, $values );
+
 		return $values;
 	}
 

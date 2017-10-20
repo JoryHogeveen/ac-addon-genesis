@@ -13,11 +13,11 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 	public function get_value( $id ) {
 		$value = $this->get_raw_value( $id );
 
-		if ( ! is_array( $value ) ) {
+		if ( ! $value ) {
 			$value = array();
 		}
 
-		return implode( $this->get_separator(), $value );
+		return implode( $this->get_separator(), (array) $value );
 	}
 
 	/**

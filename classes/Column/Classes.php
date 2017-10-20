@@ -46,7 +46,7 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 			$values = explode( $this->get_separator(), $values );
 			$values = array_combine( $values, $values );
 
-		} elseif ( ! $single ) {
+		} else {
 
 			foreach ( $values as $key => $val ) {
 				$val = explode( $this->get_separator(), $val );

@@ -195,7 +195,7 @@ class ACA_Genesis {
 	 * @param AC_ListScreen $list_screen
 	 */
 	public function table_scripts( $list_screen ) {
-		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '.min' : '';
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		$url = $this->get_plugin_url();
 

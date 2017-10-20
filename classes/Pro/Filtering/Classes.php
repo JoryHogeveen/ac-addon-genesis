@@ -39,6 +39,8 @@ class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
 			$value = serialize( $value );
 		}
 
+		$sep = $this->column->get_separator();
+
 		$meta_query = array(
 			'relation' => 'OR',
 			// 100% equal.
@@ -61,7 +63,7 @@ class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
 			 */
 			array(
 				'key'     => $key,
-				'value'   => '(^| )' . $value . '( |$)',
+				'value'   => '(^|' . $sep . ')' . $value . '(' . $sep . '|$)',
 				'type'    => $type,
 				'compare' => 'RLIKE',
 			),
@@ -80,7 +82,7 @@ class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
 		$new_values = array();
 
 		foreach ( $values as $key => $val ) {
-			$val = explode( ' ', $val );
+			$val = explode( $this->column->get_separator(), $val );
 			$new_values = array_merge( $new_values, array_combine( $val, $val ) );
 		}
 

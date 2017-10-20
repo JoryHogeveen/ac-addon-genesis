@@ -274,9 +274,9 @@ class ACA_Genesis {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_Headline() );
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_IntroText() );
 				}
+				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_Headline() );
+				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_IntroText() );
 				break;
 
 			case $list_screen instanceof ACP_ListScreen_Taxonomy:
@@ -284,9 +284,9 @@ class ACA_Genesis {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Headline() );
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_IntroText() );
 				}
+				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Headline() );
+				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_IntroText() );
 				break;
 		}
 	}

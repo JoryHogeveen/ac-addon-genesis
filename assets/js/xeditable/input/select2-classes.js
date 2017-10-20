@@ -13,7 +13,6 @@
 
 	$.fn.editabletypes.select2_classes = Select2_Classes;
 
-	console.log( $.fn.editabletypes );
 }( window.jQuery ) );
 
 jQuery.fn.cacie_edit_select2_classes = function( column, item ) {

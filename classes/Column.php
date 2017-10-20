@@ -16,6 +16,11 @@ class ACA_Genesis_Column extends AC_Column_Meta
 		$this->set_group( 'genesis' );
 	}
 
+	public function scripts() {
+		parent::scripts();
+		wp_enqueue_style( 'aca-genesis-column' );
+	}
+
 	/**
 	 * @return  string
 	 */

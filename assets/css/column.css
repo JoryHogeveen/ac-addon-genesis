@@ -1,5 +1,20 @@
 /**
- * Tooltip buttons
+ * Select2 Classes
+ * ----------------------------------------------------------------------------
+ */
+table.wp-list-table tbody td.genesis-body-class .cacie-editable,
+table.wp-list-table tbody td.genesis-post-class .cacie-editable {
+	display: inline;
+}
+
+table.wp-list-table tbody td.genesis-body-class code,
+table.wp-list-table tbody td.genesis-post-class code {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+/**
+ * Genesis Layout
  * ----------------------------------------------------------------------------
  */
 table.wp-list-table tbody td.genesis-layout .inner {
@@ -12,10 +27,7 @@ table.wp-list-table tbody td.genesis-layout img {
 	height: auto;
 }
 
-/**
- * Genesis Layout
- * ----------------------------------------------------------------------------
- */
+/* Editable */
 table.wp-list-table tbody.cacie-enabled td.cacie-editable-genesis_layout .editable-input {
 	overflow-y: scroll;
 	max-height: 225px;

@@ -17,6 +17,10 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 			return false;
 		}
 
+		foreach ( $value as $key => $val ) {
+			$value[ $key ] = '<code>' . $val . '</code>';
+		}
+
 		return implode( $this->get_separator(), (array) $value );
 	}
 

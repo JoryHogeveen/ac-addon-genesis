@@ -64,4 +64,21 @@ abstract class ACA_Genesis_Column_Classes extends ACA_Genesis_Column
 		return ' ';
 	}
 
+	/**
+	 * @param  array  $values
+	 * @return array
+	 */
+	public function parse_classes( $values ) {
+		$new_values = array();
+
+		foreach ( (array) $values as $key => $val ) {
+			$val = explode( $this->get_separator(), $val );
+			$new_values = array_merge( $new_values, array_combine( $val, $val ) );
+		}
+
+		//$new_values = array_unique( $new_values );
+		ksort( $new_values );
+		return $new_values;
+	}
+
 }

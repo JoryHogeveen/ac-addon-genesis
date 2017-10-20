@@ -14,7 +14,7 @@ class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
 		$data = parent::get_filtering_data();
 
 		if ( ! empty( $data['options'] ) ) {
-			$data['options'] = $this->parse_classes( $data['options'] );
+			$data['options'] = $this->column->parse_classes( $data['options'] );
 		}
 
 		return $data;
@@ -72,23 +72,6 @@ class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
 		$vars['meta_query'][] = $meta_query;
 
 		return $this->get_filtering_vars_empty_nonempty( $vars );
-	}
-
-	/**
-	 * @param  array  $values
-	 * @return array
-	 */
-	public function parse_classes( $values ) {
-		$new_values = array();
-
-		foreach ( $values as $key => $val ) {
-			$val = explode( $this->column->get_separator(), $val );
-			$new_values = array_merge( $new_values, array_combine( $val, $val ) );
-		}
-
-		//$new_values = array_unique( $new_values );
-		ksort( $new_values );
-		return $new_values;
 	}
 
 }

@@ -31,7 +31,7 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
 			if ( isset( $results[0]['meta_value'] ) ) {
 				$results = wp_list_pluck( $results, 'meta_value' );
 			}
-			$options = $this->parse_classes( $results );
+			$options = $this->column->parse_classes( $results );
 		}
 		return (array) $options;
 	}
@@ -57,23 +57,6 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
 		}
 		$value = implode( $this->column->get_separator(), (array) $value );
 		parent::save( $id, $value );
-	}
-
-	/**
-	 * @param  array  $values
-	 * @return array
-	 */
-	public function parse_classes( $values ) {
-		$new_values = array();
-
-		foreach ( (array) $values as $key => $val ) {
-			$val = explode( $this->column->get_separator(), $val );
-			$new_values = array_merge( $new_values, array_combine( $val, $val ) );
-		}
-
-		//$new_values = array_unique( $new_values );
-		ksort( $new_values );
-		return $new_values;
 	}
 
 }

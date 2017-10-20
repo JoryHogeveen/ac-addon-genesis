@@ -215,7 +215,8 @@ class ACA_Genesis {
 		switch ( true ) {
 
 			case $list_screen instanceof AC_ListScreen_Post:
-				if ( current_theme_supports( 'genesis-inpost-layouts' ) ) {
+				$post_type = $list_screen->get_post_type();
+				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Column_Post_Layout() );
 					}
@@ -259,7 +260,8 @@ class ACA_Genesis {
 		switch ( true ) {
 
 			case $list_screen instanceof AC_ListScreen_Post:
-				if ( current_theme_supports( 'genesis-inpost-layouts' ) ) {
+				$post_type = $list_screen->get_post_type();
+				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Post_Layout() );
 					}

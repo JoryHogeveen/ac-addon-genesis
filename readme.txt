@@ -23,6 +23,8 @@ Show Genesis Framework fields in your admin post overviews and (if you have Admi
 
 * **Genesis Layouts Extras** https://wordpress.org/plugins/genesis-layout-extras/
 
+The plugin will notify you at installation if something is missing.
+
 == Installation ==
 
 Installation of this plugin works like any other plugin out there. Either:

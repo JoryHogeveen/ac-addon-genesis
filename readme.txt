@@ -3,7 +3,7 @@ Contributors: keraweb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLMLU7XQ9E8&lc=NL&item_name=Admin%20Columns%20-%20Genesis%20add-on&item_number=JWPP%2dACA-Genesis&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
-Tested up to: 4.8
+Tested up to: 4.9
 Requires PHP: 5.2.4
 Stable tag: 1.0
 

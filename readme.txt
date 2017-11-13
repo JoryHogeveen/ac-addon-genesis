@@ -15,9 +15,9 @@ Show Genesis Framework fields in your admin post overviews and (if you have Admi
 
 = Requirements =
 
-* **Admin Columns:** https://wordpress.org/plugins/codepress-admin-columns/
-  * *Or **Admin Columns Pro:** https://www.admincolumns.com/*
-* **Theme based on the Genesis framework:** https://my.studiopress.com/themes/genesis/
+* **Admin Columns:** [wordpress.org/plugins/codepress-admin-columns](https://wordpress.org/plugins/codepress-admin-columns/)
+  * *Or **Admin Columns Pro:** [www.admincolumns.com](https://www.admincolumns.com/)*
+* **Theme based on the Genesis framework:** [my.studiopress.com/themes/genesis](https://my.studiopress.com/themes/genesis/)
 
 = Compatibility =
 

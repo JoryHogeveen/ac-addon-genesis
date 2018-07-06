@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column extends AC_Column_Meta
+class ACA_Genesis_Column extends AC\Column\Meta
 {
 	public $meta_key = '';
 

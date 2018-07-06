@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class ACA_Genesis_Pro_Column_User_IntroText extends ACA_Genesis_Column_User_IntroText
-	implements ACP_Column_EditingInterface, ACP_Column_SortingInterface
-	//, ACP_Column_FilteringInterface
+	implements \ACP\Editing\Editable, \ACP\Sorting\Sortable
+	//, \ACP\Filtering\Filterable
 {
 	// Pro
 

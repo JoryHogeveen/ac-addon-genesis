@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
+class ACA_Genesis_Pro_Editing_Classes extends ACP\Editing\Model\Meta
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::get_view_settings()
+	 * @see  ACP\Editing\Model::get_view_settings()
 	 */
 	public function get_view_settings() {
 		return array(
@@ -40,7 +40,7 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
 	 * Get editing options when using an ajax callback
 	 *
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model::get_ajax_options()
+	 * @see  ACP\Editing\Model::get_ajax_options()
 	 */
 	public function get_ajax_options( $request ) {
 		return $this->get_options();
@@ -48,7 +48,7 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP_Editing_Model_Meta
 
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Editing_Model_Meta::get_view_settings()
+	 * @see  ACP\Editing\Model\Meta::save()
 	 */
 	public function save( $id, $value ) {
 		if ( is_string( $value ) ) {

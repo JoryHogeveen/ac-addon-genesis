@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Admin Columns - Genesis Framework add-on
  * Plugin URI:   https://github.com/JoryHogeveen/ac-addon-genesis
- * Version:      1.0
+ * Version:      1.1
  * Description:  Show Genesis Framework fields in your admin post overviews and edit them inline! Genesis Framework integration Add-on for Admin Columns.
  * Author:       Jory Hogeveen
  * Author URI:   http://www.keraweb.nl
@@ -12,6 +12,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+define( 'ACA_GENESIS_FILE', __FILE__ );
 
 class ACA_Genesis {
 
@@ -52,7 +54,7 @@ class ACA_Genesis {
 			return;
 		}
 
-		AC()->autoloader()->register_prefix( self::CLASS_PREFIX, $this->get_plugin_dir() . 'classes/' );
+		AC\Autoloader::instance()->register_prefix( 'ACA\Genesis', plugin_dir_path( ACA_GENESIS_FILE ) . 'classes/' );
 
 		add_action( 'ac/column_groups', array( $this, 'register_column_groups' ) );
 		// Prio 9 to make sure PRO is loaded after FREE.
@@ -65,7 +67,7 @@ class ACA_Genesis {
 	}
 
 	/**
-	 * @param AC_Groups $groups
+	 * @param AC\Groups $groups
 	 */
 	public function register_column_groups( $groups ) {
 		$groups->register_group( 'genesis', __( 'Genesis', 'genesis' ), 11 );
@@ -75,16 +77,24 @@ class ACA_Genesis {
 	 * @return bool True when there are missing dependencies
 	 */
 	private function has_missing_dependencies() {
-		require_once plugin_dir_path( __FILE__ ) . 'classes/Dependencies.php';
+		require_once 'classes/Dependencies.php';
 
-		$dependencies = new ACA_Genesis_Dependencies( __FILE__ );
+		$dependencies = new ACA_Genesis_Dependencies( plugin_basename( ACA_GENESIS_FILE ) );
+		$dependencies->check_php_version( '5.3' );
+
+		if ( ! class_exists( 'AC\Autoloader' ) ) {
+			if ( $this->is_pro_active() ) {
+				$dependencies->check_acp( '4.3' );
+			} else {
+				$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
+			}
+		}
 
 		// Pro not required.
 		//$dependencies->is_acp_active( '4.0.3' );
 
 		if ( ! $this->is_genesis_active() ) {
-			$link = $dependencies->get_html_link( 'https://my.studiopress.com/themes/genesis/', 'Genesis Framework', true );
-			$dependencies->add_missing( $link );
+			$dependencies->add_missing_plugin( 'Genesis Framework', 'https://my.studiopress.com/themes/genesis/' );
 		}
 
 		return $dependencies->has_missing();
@@ -99,6 +109,7 @@ class ACA_Genesis {
 			return $basename;
 		}
 		$basename = plugin_basename( __FILE__ );
+
 		return $basename;
 	}
 
@@ -111,6 +122,7 @@ class ACA_Genesis {
 			return $dir;
 		}
 		$dir = plugin_dir_path( __FILE__ );
+
 		return $dir;
 	}
 
@@ -123,6 +135,7 @@ class ACA_Genesis {
 			return $url;
 		}
 		$url = plugin_dir_url( __FILE__ );
+
 		return $url;
 	}
 
@@ -136,6 +149,7 @@ class ACA_Genesis {
 		}
 		$plugins = get_plugins();
 		$version = $plugins[ $this->get_plugin_basename() ]['Version'];
+
 		return $version;
 	}
 
@@ -214,7 +228,7 @@ class ACA_Genesis {
 
 		switch ( true ) {
 
-			case $list_screen instanceof AC_ListScreen_Post:
+			case $list_screen instanceof AC\ListScreen\Post:
 				$post_type = $list_screen->get_post_type();
 				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
@@ -225,7 +239,7 @@ class ACA_Genesis {
 				}
 				break;
 
-			case $list_screen instanceof AC_ListScreen_User:
+			case $list_screen instanceof AC\ListScreen\User:
 				// Users also use archives.
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
@@ -236,7 +250,7 @@ class ACA_Genesis {
 				}
 				break;
 
-			case $list_screen instanceof ACP_ListScreen_Taxonomy:
+			case $list_screen instanceof ACP\ListScreen\Taxonomy:
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Column_Term_Layout() );
@@ -259,7 +273,7 @@ class ACA_Genesis {
 
 		switch ( true ) {
 
-			case $list_screen instanceof AC_ListScreen_Post:
+			case $list_screen instanceof AC\ListScreen\Post:
 				$post_type = $list_screen->get_post_type();
 				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
@@ -270,7 +284,7 @@ class ACA_Genesis {
 				}
 				break;
 
-			case $list_screen instanceof AC_ListScreen_User:
+			case $list_screen instanceof AC\ListScreen\User:
 				// Users also use archives.
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
@@ -281,7 +295,7 @@ class ACA_Genesis {
 				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_IntroText() );
 				break;
 
-			case $list_screen instanceof ACP_ListScreen_Taxonomy:
+			case $list_screen instanceof ACP\ListScreen\Taxonomy:
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
 						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Layout() );

@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Filtering_Classes extends ACP_Filtering_Model_Meta
+class ACA_Genesis_Pro_Filtering_Classes extends ACP\Filtering\Model\Meta
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP_Filtering_Model_Meta::get_filtering_data()
+	 * @see  ACP\Filtering\Model\Meta::get_filtering_data()
 	 */
 	public function get_filtering_data() {
 		$data = parent::get_filtering_data();

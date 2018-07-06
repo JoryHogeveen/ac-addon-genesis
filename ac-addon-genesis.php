@@ -80,9 +80,10 @@ class ACA_Genesis {
 		require_once 'classes/Dependencies.php';
 
 		$dependencies = new ACA_Genesis_Dependencies( plugin_basename( ACA_GENESIS_FILE ) );
+		$dependencies->check_php_version( '5.3' );
 
 		if ( ! class_exists( 'AC\Autoloader' ) ) {
-			if ( function_exists( 'ACP' ) ) {
+			if ( $this->is_pro_active() ) {
 				$dependencies->check_acp( '4.3' );
 			} else {
 				$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );

@@ -44,7 +44,8 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 
 = 1.1 =
 
-*	Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
+*	**Compatibility/Fix:** Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
+*	**Enhancement:** Use the same textarea save validation as Genesis.
 
 = 1.0 =
 

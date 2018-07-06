@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YGPLM
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
 Tested up to: 4.9
-Requires PHP: 5.2.4
+Requires PHP: 5.3
 Stable tag: 1.1
 
 Genesis Framework integration Add-on for Admin Columns.

@@ -5,7 +5,7 @@ Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
 Tested up to: 4.9
 Requires PHP: 5.2.4
-Stable tag: 1.0
+Stable tag: 1.1
 
 Genesis Framework integration Add-on for Admin Columns.
 
@@ -17,13 +17,13 @@ Show Genesis Framework fields in your admin post overviews and (if you have Admi
 
 * **Admin Columns:** [wordpress.org/plugins/codepress-admin-columns](https://wordpress.org/plugins/codepress-admin-columns/)
   * *Or **Admin Columns Pro:** [www.admincolumns.com](https://www.admincolumns.com/)*
-* **Theme based on the Genesis framework:** [my.studiopress.com/themes/genesis](https://my.studiopress.com/themes/genesis/)
+* **Theme based on the Genesis framework:** [my.studiopress.com/themes/genesis/](https://my.studiopress.com/themes/genesis/)
+
+The plugin will notify you at installation if something is missing.
 
 = Compatibility =
 
-* **Genesis Layouts Extras** [wordpress.org/plugins/genesis-layout-extras](https://wordpress.org/plugins/genesis-layout-extras/)
-
-The plugin will notify you at installation if something is missing.
+* **Genesis Layouts Extras** https://wordpress.org/plugins/genesis-layout-extras/
 
 == Installation ==
 
@@ -41,6 +41,10 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 3. Genesis metabox
 
 == Changelog ==
+
+= 1.1 =
+
+*	Made compatible with Admin Columns 3.2 & Admin Columns Pro 4.3
 
 = 1.0 =
 

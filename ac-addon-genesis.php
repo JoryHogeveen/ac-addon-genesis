@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Admin Columns - Genesis Framework add-on
  * Plugin URI:   https://github.com/JoryHogeveen/ac-addon-genesis
- * Version:      1.1
+ * Version:      1.2
  * Description:  Show Genesis Framework fields in your admin post overviews and edit them inline! Genesis Framework integration Add-on for Admin Columns.
  * Author:       Jory Hogeveen
  * Author URI:   http://www.keraweb.nl

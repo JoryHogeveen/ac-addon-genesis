@@ -3,9 +3,9 @@ Contributors: keraweb
 Donate link: https://www.keraweb.nl/donate.php?for=ac-addon-genesis
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
-Tested up to: 4.9
+Tested up to: 5.0
 Requires PHP: 5.3
-Stable tag: 1.1
+Stable tag: 1.2
 
 Genesis Framework integration Add-on for Admin Columns.
 
@@ -41,6 +41,10 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 3. Genesis metabox
 
 == Changelog ==
+
+= 1.1 =
+
+*	**Compatibility:** Made compatible with Admin Columns Pro 4.4
 
 = 1.1 =
 

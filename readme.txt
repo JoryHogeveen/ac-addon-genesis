@@ -42,7 +42,7 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 
 == Changelog ==
 
-= 1.1 =
+= 1.2 =
 
 *	**Compatibility:** Made compatible with Admin Columns Pro 4.4
 

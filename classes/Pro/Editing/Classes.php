@@ -33,7 +33,7 @@ class ACA_Genesis_Pro_Editing_Classes extends ACP\Editing\Model\Meta
 			}
 			$options = $this->column->parse_classes( $results );
 		}
-		return (array) $options;
+		return (array) array_filter( $options );
 	}
 
 	/**

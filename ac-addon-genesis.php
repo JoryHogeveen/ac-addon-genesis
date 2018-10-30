@@ -82,12 +82,10 @@ class ACA_Genesis {
 		$dependencies = new ACA_Genesis_Dependencies( plugin_basename( ACA_GENESIS_FILE ) );
 		$dependencies->check_php_version( '5.3.6' );
 
-		if ( ! class_exists( 'AC\Autoloader' ) ) {
-			if ( $this->is_pro_active() ) {
-				$dependencies->check_acp( '4.3' );
-			} else {
-				$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
-			}
+		if ( $this->is_pro_active() ) {
+			$dependencies->check_acp( '4.4-dev' );
+		} else {
+			$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
 		}
 
 		// Pro not required.

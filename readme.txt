@@ -44,7 +44,10 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 
 = 1.2 =
 
-*	**Compatibility:** Made compatible with Admin Columns Pro 4.4
+*	**Feature/Compatibility:** Made compatible with Admin Columns Pro 4.4 search filters.
+
+If you use Admin Columns Pro, please make sure to upgrade to 4.4 first! Previous Pro versions are not supported anymore.
+There are no changes for Admin Columns free users.
 
 = 1.1 =
 
@@ -62,3 +65,9 @@ You can find me here:
 *	[Keraweb](http://www.keraweb.nl/ "Keraweb")
 *	[GitHub](https://github.com/JoryHogeveen/admincolumns-addon-members/)
 *	[LinkedIn](https://nl.linkedin.com/in/joryhogeveen "LinkedIn profile")
+
+== Upgrade Notice ==
+
+= 1.2 =
+If you use Admin Columns Pro, please make sure to upgrade to 4.4 first! Previous Pro versions are not supported anymore.
+There are no changes for Admin Columns free users.

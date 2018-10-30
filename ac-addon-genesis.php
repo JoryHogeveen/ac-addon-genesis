@@ -80,7 +80,7 @@ class ACA_Genesis {
 		require_once 'classes/Dependencies.php';
 
 		$dependencies = new ACA_Genesis_Dependencies( plugin_basename( ACA_GENESIS_FILE ) );
-		$dependencies->check_php_version( '5.3' );
+		$dependencies->check_php_version( '5.3.6' );
 
 		if ( ! class_exists( 'AC\Autoloader' ) ) {
 			if ( $this->is_pro_active() ) {

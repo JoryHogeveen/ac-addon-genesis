@@ -23,12 +23,12 @@ jQuery.fn.cacie_edit_select2_classes = function( column, item ) {
 	var value = el.cacie_get_value( column, item );
 	var options = column.editable.options;
 
-	if ( $.fn.editabletypes.hasOwnProperty( 'ac_select2_tags' ) ) {
+	// e.g. no terms available
+	if ( ! value ) {
+		value = [];
+	}
 
-		// e.g. no terms available
-		if ( 'false' === value || false === value ) {
-			value = '';
-		}
+	if ( $.fn.editabletypes.hasOwnProperty( 'ac_select2_tags' ) ) {
 
 		el.cacie_xeditable( {
 			type : 'ac_select2_tags',

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class ACA_Genesis_Pro_Column_Term_Headline extends ACA_Genesis_Column_Term_Headline
-	implements \ACP\Editing\Editable, \ACP\Sorting\Sortable
+	implements \ACP\Editing\Editable, \ACP\Sorting\Sortable, \ACP\Search\Searchable
 	//, \ACP\Filtering\Filterable
 {
 	// Pro
@@ -20,6 +20,10 @@ class ACA_Genesis_Pro_Column_Term_Headline extends ACA_Genesis_Column_Term_Headl
 
 	public function filtering() {
 		return new ACA_Genesis_Pro_Filtering( $this );
+	}
+
+	public function search() {
+		return new ACP\Search\Comparison\Meta\Text( $this->get_meta_key(), 'post' );
 	}
 
 }

@@ -21,6 +21,10 @@ class ACA_Genesis_Pro_Column_Term_Layout extends ACA_Genesis_Column_Term_Layout
 		return new ACA_Genesis_Pro_Filtering( $this );
 	}
 
+	public function search() {
+		return new ACA_Genesis_Pro_Searching_Layout( $this->get_meta_key(), $this->get_genesis_layouts() );
+	}
+
 	public function scripts() {
 		parent::scripts();
 		wp_enqueue_script( 'aca-genesis-xeditable-input-genesis_layout' );

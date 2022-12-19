@@ -3,7 +3,7 @@ Contributors: keraweb
 Donate link: https://www.keraweb.nl/donate.php?for=ac-addon-genesis
 Tags: admincolumns, admin, columns, members, addon, integration
 Requires at least: 4.5
-Tested up to: 5.0
+Tested up to: 6.1
 Requires PHP: 5.3
 Stable tag: 1.2
 

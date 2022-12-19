@@ -48,7 +48,6 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 *	**Feature/Compatibility:** Made compatible with Admin Columns Pro 4.4 search filters.
 
 If you use Admin Columns Pro, please make sure to upgrade to 4.4 first! Previous Pro versions are not supported anymore.
-There are no changes for Admin Columns free users.
 
 = 1.1 =
 

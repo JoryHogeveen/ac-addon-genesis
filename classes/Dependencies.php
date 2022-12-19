@@ -86,6 +86,25 @@ final class ACA_Genesis_Dependencies {
 	}
 
 	/**
+	 * Check if Admin Columns is installed and meets the minimum required version
+	 *
+	 * @param string $version
+	 *
+	 * @return bool
+	 */
+	public function check_ac( $version ) {
+		$version = apply_filters( 'ac/dependencies/ac_version_gte', $version, $this->basename );
+
+		if ( function_exists( 'AC' ) ) {
+			return true;
+		}
+
+		$this->add_missing_plugin( 'Admin Column', 'https://wordpress.org/plugins/codepress-admin-columns/', $version );
+
+		return false;
+	}
+
+	/**
 	 * Check if Admin Columns Pro is installed and meets the minimum required version
 	 *
 	 * @param string $version

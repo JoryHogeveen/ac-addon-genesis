@@ -87,7 +87,7 @@ class ACA_Genesis {
 		if ( $this->is_pro_active() ) {
 			$dependencies->check_acp( '4.4-dev' );
 		} else {
-			$dependencies->add_missing_plugin( 'Admin Columns', 'https://nl.wordpress.org/plugins/codepress-admin-columns/', '3.2' );
+			$dependencies->check_ac( '3.2' );
 		}
 
 		// Pro not required.

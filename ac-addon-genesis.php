@@ -54,7 +54,9 @@ class ACA_Genesis {
 			return;
 		}
 
-		AC\Autoloader::instance()->register_prefix( 'ACA\Genesis', plugin_dir_path( ACA_GENESIS_FILE ) . 'classes/' );
+		require_once 'classes/Autoloader.php';
+
+		ACA_Genesis_Autoloader::instance()->register_prefix( 'ACA\Genesis', plugin_dir_path( ACA_GENESIS_FILE ) . 'classes/' );
 
 		add_action( 'ac/column_groups', array( $this, 'register_column_groups' ) );
 		// Prio 9 to make sure PRO is loaded after FREE.

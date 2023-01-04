@@ -42,6 +42,10 @@ Or search for "Admin Columns - Genesis add-on" via your plugins menu.
 
 == Changelog ==
 
+= 1.3 =
+
+*	**Fix:** Switch to namespaces.
+
 = 1.2 =
 
 *	**Compatibility/Fix:** Made compatible with newer AC versions using a local autoloader.

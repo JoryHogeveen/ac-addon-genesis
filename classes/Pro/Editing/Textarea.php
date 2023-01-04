@@ -1,14 +1,16 @@
 <?php
+namespace ACA\Genesis\Pro\Editing;
+use ACA\Genesis\Pro\Editing;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Editing_Textarea extends ACA_Genesis_Pro_Editing
+class Textarea extends Editing
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP\Editing\Model::get_view_settings()
+	 * @see  \ACP\Editing\Model::get_view_settings()
 	 */
 	public function get_view_settings() {
 		return array(
@@ -18,7 +20,7 @@ class ACA_Genesis_Pro_Editing_Textarea extends ACA_Genesis_Pro_Editing
 
 	/**
 	 * @inheritdoc
-	 * @see  ACP\Editing\Model\Meta::save()
+	 * @see  \ACP\Editing\Model\Meta::save()
 	 */
 	public function save( $id, $value ) {
 		// Same value validation as Genesis.

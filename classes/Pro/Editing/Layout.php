@@ -1,14 +1,16 @@
 <?php
+namespace ACA\Genesis\Pro\Editing;
+use ACA\Genesis\Pro\Editing;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Editing_Layout extends ACA_Genesis_Pro_Editing
+class Layout extends Editing
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP\Editing\Model::get_view_settings()
+	 * @see  \ACP\Editing\Model::get_view_settings()
 	 */
 	public function get_view_settings() {
 		/**

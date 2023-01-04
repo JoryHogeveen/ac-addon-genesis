@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-use AC\DirectoryIterator;
-use AC\FilesystemIterator;
+use \AC\DirectoryIterator;
+use \AC\FilesystemIterator;
 
 class ACA_Genesis_Autoloader {
 

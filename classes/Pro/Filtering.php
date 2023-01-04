@@ -1,16 +1,18 @@
 <?php
+namespace ACA\Genesis\Pro;
+use ACA\Genesis\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Filtering extends ACP\Filtering\Model\Meta
+class Filtering extends \ACP\Filtering\Model\Meta
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP\Filtering\Model\Meta::__construct()
+	 * @see  \ACP\Filtering\Model\Meta::__construct()
 	 */
-	public function __construct( ACA_Genesis_Column $column ) {
+	public function __construct( Column $column ) {
 		parent::__construct( $column );
 	}
 

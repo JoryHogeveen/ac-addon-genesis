@@ -1,10 +1,12 @@
 <?php
+namespace ACA\Genesis\Column\Post;
+use ACA\Genesis\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column_Post_PostClass extends ACA_Genesis_Column_Classes
+class PostClass extends Column
 {
 	/**
 	 * @inheritdoc

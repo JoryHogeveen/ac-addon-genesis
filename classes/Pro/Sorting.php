@@ -1,16 +1,18 @@
 <?php
+namespace ACA\Genesis\Pro;
+use ACA\Genesis\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Sorting extends ACP\Sorting\Model\Meta
+class Sorting extends \ACP\Sorting\Model\Meta
 {
 	/**
 	 * @inheritdoc
-	 * @see  ACP\Sorting\Model\Meta::__construct()
+	 * @see  \ACP\Sorting\Model\Meta::__construct()
 	 */
-	public function __construct( ACA_Genesis_Column $column ) {
+	public function __construct( Column $column ) {
 		parent::__construct( $column );
 	}
 

@@ -1,10 +1,12 @@
 <?php
+namespace ACA\Genesis\Column\Term;
+use ACA\Genesis\Column;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column_Term_Headline extends ACA_Genesis_Column
+class Headline extends Column
 {
 	/**
 	 * @inheritdoc

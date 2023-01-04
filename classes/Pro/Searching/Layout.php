@@ -1,4 +1,5 @@
 <?php
+namespace ACA\Genesis\Pro\Searching;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -7,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 use \ACP\Search\Operators;
 use \ACP\Helper\Select\Options;
 
-class ACA_Genesis_Pro_Searching_Layout extends ACP\Search\Comparison\Meta
-	implements ACP\Search\Comparison\Values
+class Layout extends \ACP\Search\Comparison\Meta
+	implements \ACP\Search\Comparison\Values
 {
 	public $genesis_layouts;
 

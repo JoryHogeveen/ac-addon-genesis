@@ -1,28 +1,30 @@
 <?php
+namespace ACA\Genesis\Pro\Column\Term;
+use ACA\Genesis\Column\Term\Layout as Column_Term_Layout;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Pro_Column_Term_Layout extends ACA_Genesis_Column_Term_Layout
+class Layout extends Column_Term_Layout
 	implements \ACP\Editing\Editable, \ACP\Sorting\Sortable, \ACP\Filtering\Filterable
 {
 	// Pro
 
 	public function editing() {
-		return new ACA_Genesis_Pro_Editing_Layout( $this );
+		return new \ACA\Genesis\Pro\Editing\Layout( $this );
 	}
 
 	public function sorting() {
-		return new ACA_Genesis_Pro_Sorting( $this );
+		return new \ACA\Genesis\Pro\Sorting( $this );
 	}
 
 	public function filtering() {
-		return new ACA_Genesis_Pro_Filtering( $this );
+		return new \ACA\Genesis\Pro\Filtering( $this );
 	}
 
 	public function search() {
-		return new ACA_Genesis_Pro_Searching_Layout( $this->get_meta_key(), $this->get_genesis_layouts() );
+		return new \ACA\Genesis\Pro\Searching\Layout( $this->get_meta_key(), $this->get_genesis_layouts() );
 	}
 
 	public function scripts() {

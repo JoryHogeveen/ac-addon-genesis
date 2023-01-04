@@ -1,10 +1,12 @@
 <?php
+namespace ACA\Genesis\Column\User;
+use ACA\Genesis\Column\Layout as Column_Layout;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column_User_Layout extends ACA_Genesis_Column_Layout
+class Layout extends Column_Layout
 {
 	/**
 	 * @return  string

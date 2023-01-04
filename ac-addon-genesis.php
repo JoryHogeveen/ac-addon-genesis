@@ -232,10 +232,10 @@ class ACA_Genesis {
 				$post_type = $list_screen->get_post_type();
 				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Column_Post_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Column\Post\Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Column_Post_BodyClass() );
-					$list_screen->register_column_type( new ACA_Genesis_Column_Post_PostClass() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\Post\BodyClass() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\Post\PostClass() );
 				}
 				break;
 
@@ -243,20 +243,20 @@ class ACA_Genesis {
 				// Users also use archives.
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Column_User_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Column\User\Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Column_User_Headline() );
-					$list_screen->register_column_type( new ACA_Genesis_Column_User_IntroText() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\User\Headline() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\User\IntroText() );
 				}
 				break;
 
 			case $list_screen instanceof ACP\ListScreen\Taxonomy:
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Column_Term_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Column\Term\Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Column_Term_Headline() );
-					$list_screen->register_column_type( new ACA_Genesis_Column_Term_IntroText() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\Term\Headline() );
+					$list_screen->register_column_type( new \ACA\Genesis\Column\Term\IntroText() );
 				}
 				break;
 		}
@@ -277,10 +277,10 @@ class ACA_Genesis {
 				$post_type = $list_screen->get_post_type();
 				if ( current_theme_supports( 'genesis-inpost-layouts' ) && post_type_supports( $post_type, 'genesis-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Post_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Post\Layout() );
 					}
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Post_BodyClass() );
-					$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Post_PostClass() );
+					$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Post\BodyClass() );
+					$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Post\PostClass() );
 				}
 				break;
 
@@ -288,21 +288,21 @@ class ACA_Genesis {
 				// Users also use archives.
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\User\Layout() );
 					}
 				}
-				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_Headline() );
-				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_User_IntroText() );
+				$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\User\Headline() );
+				$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\User\IntroText() );
 				break;
 
 			case $list_screen instanceof ACP\ListScreen\Taxonomy:
 				if ( current_theme_supports( 'genesis-archive-layouts' ) ) {
 					if ( $has_multiple_layouts ) {
-						$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Layout() );
+						$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Term\Layout() );
 					}
 				}
-				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_Headline() );
-				$list_screen->register_column_type( new ACA_Genesis_Pro_Column_Term_IntroText() );
+				$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Term\Headline() );
+				$list_screen->register_column_type( new \ACA\Genesis\Pro\Column\Term\IntroText() );
 				break;
 		}
 	}

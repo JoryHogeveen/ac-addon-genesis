@@ -1,16 +1,18 @@
 <?php
 
+namespace ACA\Genesis;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ACA_Genesis_Column extends AC\Column\Meta
+class Column extends \AC\Column\Meta
 {
 	public $meta_key = '';
 
 	/**
 	 * @inheritdoc
-	 * @see  AC_Column_Meta::__construct()
+	 * @see  \AC\Column\Meta::__construct()
 	 */
 	public function __construct( $data = array() ) {
 		$this->set_group( 'genesis' );
